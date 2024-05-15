@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    width: 300px;
+    background-color: #99bdf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box{
+    z-index: 2;
+}
+
+.container::before{
+    position: absolute;
+    content: '';
+    bottom: -40%;
+    height: 100%;
+    aspect-ratio: 1;;
+    background: #fff;
+    border-radius: 38% 62% 45% 55% / 57% 31% 69% 43% ;
+    opacity: 0.4;
+    animation: rotatry 4s infinite linear;
+}
+
+.container::after{
+    position: absolute;
+    content: '';
+    bottom: -40%;
+    height: 100%;
+    aspect-ratio: 1;;
+    background: #fff;
+    border-radius:48% 52% 65% 35% / 41% 61% 39% 59% ;
+    opacity: 0.4;
+    animation: rotatry 4s infinite linear;
+}
+
+@keyframes rotatry{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.fa-street-view{
+    color: #fff;
+    animation: rotates 3s linear infinite alternate;
+}
+@keyframes rotates{
+    from{
+        transform: translateX(-0.5rem);
+    }
+    to{
+        transform: translateX(0.5rem);
+    }
+}
+
+.fa-sun {
+    animation: zoom 6s linear infinite alternate;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(2);
+    }
+    10% {
+        transform: scale(1);
+    }
+}
+#weathercon{
+    padding: 50px 50px 150px 50px;
+   
+}
+
+
+.temp, .street{
+    font-weight: bold;
+    font-size: 30px;
+
+}
+.tempminmax{
+    padding-top: 15px;
+}
